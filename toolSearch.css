@@ -77,3 +77,9 @@ header .label {
   display: flex;
   justify-content: center;
 }
+.wrapper {
+  background-image: url("https://lh6.googleusercontent.com/-Y99YMmnSgE2_3jSfNR6F2fqrv5qPwlDgnq3MZ5bAzchU-G9CrbjcXFir3IyysvRcREIJ3SBKeEp-gRUPAAN=w1920-h946");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
