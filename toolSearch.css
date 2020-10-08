@@ -4,6 +4,26 @@ h1 > a {
 html {
   font-family: "Lato",sans-serif;
 }
+.dropDown {
+  background-color: #7db7d2;
+  border-color: #7db7d2;
+  color: white;
+}
+.btn, .btn:hover, .btn:focus, .btn:active {
+  background-color: #7db7d2;
+  border-color: #7db7d2;
+  color: white;
+}
+.btn-drop, .btn-drop:hover, .btn-drop:focus, .btn-drop:active {
+  background-color: #7db7d2;
+  border-color: #7db7d2;
+  color: white;
+}
+.btn-submit, .btn-submit:hover, .btn-submit:focus, .btn-submit:active {
+  background-color: #163e70;
+  border-color:#163e70;
+  color: white;
+}
 header {
   display: flex;
   flex-direction: column;
@@ -46,26 +66,6 @@ header .label {
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-}
-.dropDown {
-  background-color: #7db7d2;
-  border-color: #7db7d2;
-  color: white;
-}
-.btn, .btn:hover, .btn:focus, .btn:active {
-  background-color: #7db7d2;
-  border-color: #7db7d2;
-  color: white;
-}
-.btn-drop, .btn-drop:hover, .btn-drop:focus, .btn-drop:active {
-  background-color: #7db7d2;
-  border-color: #7db7d2;
-  color: white;
-}
-.btn-submit, .btn-submit:hover, .btn-submit:focus, .btn-submit:active {
-  background-color: #163e70;
-  border-color:#163e70;
-  color: white;
 }
 .video, .image {
   display: flex;
