@@ -48,6 +48,8 @@ header .label {
   margin-bottom: 20px;
 }
 .btn, .btn:hover, .btn:focus, .btn:active {
+  background-color: #7db7d2;
+  border-color: #7db7d2;
   color: white;
 }
 .btn-drop, .btn-drop:hover, .btn-drop:focus, .btn-drop:active {
