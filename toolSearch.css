@@ -47,6 +47,11 @@ header .label {
   border-radius: 10px;
   margin-bottom: 20px;
 }
+.dropDown {
+  background-color: #7db7d2;
+  border-color: #7db7d2;
+  color: white;
+}
 .btn, .btn:hover, .btn:focus, .btn:active {
   background-color: #7db7d2;
   border-color: #7db7d2;
