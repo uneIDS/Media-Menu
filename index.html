@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tool Finder</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="toolSearch.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="findTools.js"></script>
+  </head>
+  
+<html>
+<!--header section where search function lives...DO NOT EDIT unless otherwise noted-->
+<header class="banner sticky container-fluid">
+  <h1 class="search-bar">Search for a Tool</h1>
+  <div class="search-bar">
+    <div class="label">
+      <label for="mediaType">Media Type:</label>
+    </div>
+    <div class="input-drop">
+      <select name="mediaType" id="mediaType" class="dropDown btn btn-drop">
+        <!--Can edit options below as long as value remains the same/is updated in js file to match-->
+        <option value="Animation">Animation</option>
+        <option value="Video">Video</option>
+        <option value="Project Planning"> Project Planning</option>
+        <option value="Storytelling">Storytelling</option>
+        <option value="Writing/Editing">Writing/Editing</option>
+        <option value="All">All</option>
+      </select>
+
+    </div>
+    <div class="label">
+      <label for="diffLevel">Difficulty Level: </label>
+    </div>
+    <div class="input-drop">
+      <select name="diffLevel" id="difficultyLevel" class="dropDown btn btn-drop">
+        <!--Can edit options below as long as value remains the same/is updated in js file to match-->
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+        <option value="All">All</option>
+      </select>
+    </div>
+    <div class="submit-button">
+      <button class="btn btn-submit" type="button" onclick="findTools()"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</header>
+
+<!--Main content of page. DO NOT change any id values-->
+
+<body class="wrapper">
+  <div class="container container-fluid">
+    <div class="content">
+      <div class="easy">
+        <div id="diffHeader-easy" style="display:none">
+          <h3>Easy</h3>
+          <hr>
+        </div>
+        <div id="Hemmingway" style="display:none">
+          <div class="inner-content">
+            <div class="resource-name">
+              <h3><a href="http://www.hemingwayapp.com/">Hemmingway</a></h3>
+            </div>
+            <div class="description">
+              <div class="image">
+                <img src="https://www.self-publishingschool.com/wp-content/uploads/2019/03/hemingway-editor-review-1024x563.jpg" alt="Photo of main page of Hemmingway" width="75%">
+              </div>
+              <hr>
+              <h5>What is it?</h5>
+              <p>Hemmingway is a writing app that gives specific feedback on writing style and level. Different from other word processors or editing apps, Hemmingway uses visual cues after assessing your writing for readability, to highlight sections that are hard to read or use passive voice and make suggestions.</p>
+              <h5>Use Cases:</h5>
+              <p>
+                <ul>
+                  <li>Checking papers/assignments for readability</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="Padlet" style="display:none">
+          <div class="inner-content">
+            <div class="resource-name">
+              <h3><a href="https://padlet.com/features">Padlet</a></h3>
+            </div>
+            <div class="description">
+              <div class="image"><img src="https://lh3.googleusercontent.com/8OgJvwVflS2qqMP8oXsizoGbrJnGZtSU4WcKiaEgef6BE-YLQLul71246RlE4dOp9_PFWUfe=w640-h400-e365-rj-sc0x00ffffff" alt="Image of a padlet wall"></div>
+              <hr>
+              <h5>What is it and what does it do?</h5>
+              <p>Padlet is a collaboration and curation tool -- it can be used to store and organize ideas, including text, images, videos, audio, etc. These boards can then be shared, so multiple users can contribute to one board</p>
+              <h5>Examples:</h5>
+              <p>list of examples</p>
+              <h5>Planning Considerations:</h5>
+              <p>
+                <ul>
+                  <li>There are a variety of options available including the ability to comment, grade, and rate posts, allow for anonymous or named commentators, and even a profanity filter.</li>
+                  <li>There are a variety of layouts such as: Canvas, Shelf, Map, and Timeline</li>
+                  <li>Boards can be created as Templates using the "Remake" feature</li>
+                </ul>
+              </p>
+              <h5>Limitations:</h5>
+              <p>
+                <ul>
+                  <li>With the free version you can only have 3 boards to start with</li>
+                  <li>Padlet is "working on" their accessibility, but are basically compatible with a screen reader software</li>
+                  <li>Freedom of background choice can lead to discracting choices (need to pay attention to accessibility</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="Hypothes.is" style="display:none">
+          <div class="inner-content">
+            <div class="resource-name">
+              <h3><a href="https://web.hypothes.is/">Hypothes.is</a></h3>
+            </div>
+            <div class="description"></div>
+            <div class="image"><img src="https://d242fdlp0qlcia.cloudfront.net/uploads/2018/03/21135305/scopeselector-groupname.png" alt="Hypothes.is example image" width="75%"></div>
+            <hr>
+            <h5>What is it and what does it do?</h5>
+            <p>Hypothes.is is a collaborative, open annotation tool that can be used on websites and PDFs (video annotation should be coming soon). It has an easy to navigate user interface and allows multiple people to comment on/annotate the same piece of information as a part of a larger group (can be public or private). </p>
+            <h5>Use cases:</h5>
+            <p>
+              <ul>
+                <li>For student and instructor use</li>
+                <li>Different share settings</li>
+                <li>Could be used for small/whole class reading discussions, peer editing, and actual collaborative annotation assignments</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="medium">
+        <div id="diffHeader-medium" style="display:none">
+          <h3>Medium</h3>
+          <hr>
+        </div>
+        <div id="Vyond" style="display:none">
+          <div class="inner-content">
+            <div class="resource-name">
+              <h3><a href="https://www.vyond.com/" target="_blank">Vyond</a></h3>
+            </div>
+            <div class="description">
+              <h5>What is it & what can it do?</h5>
+              <p>Vyond allows users to make professional-looking animated videos to present key concepts.</p>
+              <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KP8EC9r0tJ0" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <hr>
+              <h5>Use Cases:</h5>
+              <p>When a complex idea can be simplified into chunks, and visual representations are helpful, Vyond might be a good fit.
+                When it is not necessary/appropriate to hire actors to play parts, or when backgrounds/scenarios are not possible to recreate live.</p>
+              <h5>Examples:</h5>
+              <ul>
+                <li><a href="https://app.vyond.com/videos/40cea3ca-91b5-41f1-be5f-97111f20f51a" target="_blank">Using evidence in writing</a></li>
+                <li><a href="https://app.vyond.com/videos/2e876c25-72bd-4d8f-9a49-8c743257d82a" target="_blank">EDU 709 - Welcome</a></li>
+                <li><a href="https://app.vyond.com/videos/b365ac83-72ad-42b5-857f-04661dafd88a" target="_blank">SSWO 633 - Visit with Vee</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="H5P" style="display:none">
+          <div class="inner-content">
+            <div class="resource-name">
+              <h3><a href="https://h5p.org/">H5P</a></h3>
+            </div>
+            <div class="description">
+              <div class="image"><img src="https://edwiser.org/wp-content/uploads/2017/07/Untitled-design15-1024x512.png" alt="H5P introduction image showing some of the things it can do" width="75%"></div>
+              <hr>
+              <h5>What is it and what can it do?</h5>
+              <p>Use Cases - Content presentation lending to chunking of info. Very easy to make visually appealing. One of the easiest ways to add a variety of interactive elements to engage with content. Feedback can be prewritten for all wrong or correct answers in interactive Embeds well in LMS even without integration</p>
+              <p>Examples:
+                <ul>
+                  <li><a href="https://h5p.org/presentation#example=612" target="_blank">From H5P</a></li>
+                  <li><a href="https://canvas.instructure.com/courses/1605829/pages/writing-stems-to-target-objectives" target="_blank">Writing Multiple Choice Stems</a></li>
+                </ul>
+              </p>
+              <p>Planning considerations:
+                <ul>
+                  <li>What are the major highlights from a topic or module you want students to take away?</li>
+                  <li>At what points will it be best to have students review or practice content with interactions?</li>
+                </ul>
+              </p>
+              <p> Limitations:
+                <ul>
+                  <li>Not best for narrated stuff</li>
+                  <li>Can upload audio files per slides, but not captioning</li>
+                  <li>Cannot collect data without proper LMS integration</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="Screencast-o-matic" style="display:none">
+          <div class="inner-content">
+            <div class="resource-name">
+              <h3><a href="https://screencast-o-matic.com/">Screencast-o-matic</a></h3>
+            </div>
+            <div class="description">
+              <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/2duH-5Urx80" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+              <hr>
+              <h5>What is it?</h5>
+              <p>Screen and/or Webcam recording software </p>
+              <h5>What can it do?</h5>
+              <ul>
+                <li>Records audio, screen, and webcam (if desired)</li>
+                <li>Has annotation tools available if needed</li>
+                <li>Primarily used for lectures</li>
+                <li>Recording lectures</li>
+                <li>(more advanced) editing lectures, zoom, add highlights or simple graphic elements (add annotation after the fact)</li>
+              </ul>
+              <h5>Planning Considerations:</h5>
+              <ul>
+                <li>Some time to learn the software, then mostly recording time</li>
+                <li>IDS can help with edits</li>
+                <li>Schedule ~1 hour training with IDS, more if interested in more advanced editing (unless you already know SCOM)</li>
+              </ul>
+              <p><strong>Limitations:</strong></p>
+              <ul>
+                <li>More robust edits may be needed</li>
+                <li>25 seats</li>
+                <li>Webcam can move around, but if you aren’t aware it may cover content</li>
+                <li>We need SMEs to send SOMREC files if we need to edit webcam placement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="Rise" style="display:none">
+          <div class="inner-content">
+            <div class="resource-name">
+              <h3><a href="https://articulate.com/360">Articulate Rise</a></h3>
+            </div>
+            <div class="description">
+              <div class="image">
+                <img src="https://articulate-heroes.s3.amazonaws.com/uploads/rte/czikenmr_10-Things-You-Can-Create-with-Rise-that-Aren%E2%80%99t-Training.png" alt="Articulate Rise banner" width="60%" height="auto">
+              </div>
+              <hr>
+              <h5>What is it and what can it do?</h5>
+              <p>Articulate Rise is an online course development program that allows users to easily create responsive course content.</p>
+              <h5>Use Cases and Examples:</h5>
+              <ul>
+                <li>EDU ePortfolio</li>
+                <li><a href="https://www.rabbitoreg.com/risedemo/#/?_k=6mmtkg">The Hero's Journey</a>- Branching Scenario</li>
+                <li>Case Studies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hard">
+        <div id="diffHeader-hard" style="display:none">
+          <h3>Hard</h3>
+          <hr>
+        </div>
+        <div id="Twine" style="display:none">
+          <div class="inner-content">
+            <div class="resource-name">
+              <h3><a href="https://twinery.org/">Twine</a></h3>
+            </div>
+            <div class="description"></div>
+            <div class="image">
+              <img src="https://www.dailydot.com/wp-content/uploads/2019/08/What-is-Twine-1024x512.jpg" alt="twine banner image" width="60%" height="auto">
+            </div>
+            <hr>
+            <h5>What is it and what can it do?</h5>
+            <p>Twine is a game development software that focuses on creating branching scenarios. It creates an online page that is completely customizable to work with storylines created to allow for interactivity.</p>
+            <h5>Examples:</h5>
+            <ul>
+              <li>SSWO 565</li>
+              <li><a href="https://www.choiceofgames.com/creatures-such-as-we/#utm_medium=web&utm_source=redirectMadeRealStories">Creatures Such as We</a></li>
+              <li><a href="https://caitkirby.com/downloads/Fall%202020.html">September 7, 2020</a></li>
+            </ul>
+            <h5>Planning Considerations:</h5>
+            <ul>
+              <li>Limited user interface that requires more technical coding knowledge</li>
+              <li>Story formatting and level of engagement is of particluar importance</li>
+              <li>Requires more technical support</li>
+              <li>Level of formatting/interactability is limited to how much work you want to put into it</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<!--<div id="example" style="display:none">
+        <div class="inner-content">
+          <div class="resource-name">
+          </div>
+          <div class="description"></div>
+    </div>-->
