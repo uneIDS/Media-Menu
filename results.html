@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--CSS Style Sheets-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link type="text/css" rel="stylesheet" href="style.css">
+
+  <title>Instructional Design Media Menu</title>
+</head>
+  <body onload="findTools()">
+
+    <div class="container results-container">
+      <div class="row row-cols-1 row-cols-md-5 result-row card-deck">
+        <div class="col mb-4 result-card" style="display:none;" id="GoogleSuite">
+            <div class="card h-100">
+              <img class="row card-img-top narrow-image" src="images/gsuitelogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Google Suite</h4>
+                <p class="card-text">A collection of business, productivity, collaboration, and edication software. The primary tools include Drive, Docs, Sheets, Slides, and Forms.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openGsuite" class="btn btn-info text-center m-auto" name="openGsuite" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="Screencast-o-matic">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/screencastlogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Screencast-o-matic</h4>
+                <p class="card-text">A sceen and/or webcam recording software that allows the user to edit, zoom, and add in special elements to their recordings.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openScreencast" class="btn btn-info text-center m-auto" name="openScreencast" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="Zoom">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/zoomlogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Zoom</h4>
+                <p class="card-text">Video conferencing platform that allows users to host meetings across the world. Also allows for collaboration and recording.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openZoom" class="btn btn-info text-center m-auto" name="openZoom" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="Hemmingway">
+            <div class="card h-100">
+              <img class="row card-img-top narrow-image" src="images/hemingwaylogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Hemmingway</h4>
+                <p class="card-text">A writing app that gives specific feedback on writing style and level. It uses visual cues after assessing your writing for readability.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openHemmingway" class="btn btn-info text-center m-auto" name="openHemmingway" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="Padlet">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/padletlogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Padlet</h4>
+                <p class="card-text">A collaboration and curation tool that can be used to store, organize, and share ideas on a collaborate board.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openPadlet" class="btn btn-info text-center m-auto" name="openPadlet" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="Hypothes.is">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/hypothesislogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Hypothes.is</h4>
+                <p class="card-text">A collaborative, open-source annotation tool that can be used on websites and PDFs to share annotations between multiple people.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openHypothesis" class="btn btn-info text-center m-auto" name="openHypothesis" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="Vyond">
+            <div class="card h-100">
+              <img class="row card-img-top narrow-image" src="images/vyondlogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Vyond</h4>
+                <p class="card-text">A full-bodied animation software that allows for easy editing and configuration of stories into animated segments.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openVyond" class="btn btn-info text-center m-auto" name="openVyond" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="H5P">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/h5plogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">H5P</h4>
+                <p class="card-text">Web-based elements that add easy interactivity to courses. This includes things like interactive videos, presentations, and learning activities.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openH5p" class="btn btn-info text-center m-auto" name="openH5p" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="Rise">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/riselogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Articulate Rise</h4>
+                <p class="card-text">Course authoring tools that provides multiple methods for sharing information displayed in an interactive and responsive manner.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openRise" class="btn btn-info text-center m-auto" name="openRise" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="Camtasia">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/camtasialogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Camtasia</h4>
+                <p class="card-text">Video-editing software aimed at being simpler and easier to learn than something like Adobe Premiere Pro while maintaining enough functionality.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openCamtasia" class="btn btn-info text-center m-auto" name="openCamtasia" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="Twine">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/twinelogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Twine</h4>
+                <p class="card-text">Web-based software designed to create branching scenarios/interactive narratives.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openTwine" class="btn btn-info text-center m-auto" name="openTwine" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="AdobePhotoshop">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/photoshoplogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Photoshop</h4>
+                <p class="card-text">Advanced photo-editing software based on the use of multiple layers.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openPhotshop" class="btn btn-info text-center m-auto" name="openPhotoshop" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="AdobePremierePro">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/premierelogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Premiere Pro</h4>
+                <p class="card-text">Advanced video editing software based on using multiple tracks. More functional but more difficult than Camtasia.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openPremiere" class="btn btn-info text-center m-auto" name="openPremiere" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col mb-4 result-card" style="display:none;" id="AdobeIllustrator">
+            <div class="card h-100">
+              <img class="row card-img-top" src="images/illustratorlogo.png" alt="Card image">
+              <div class="row card-body">
+                <h4 class="card-title">Illustrator</h4>
+                <p class="card-text">Advanced vector graphics editing program useful for designing logos, blueprints, infographics, and other images that need to be resolution-independent.</p>
+                <div class="row button-container m-auto text-center">
+                  <button type="button" id="openIllustrator" class="btn btn-info text-center m-auto" name="openIllustrator" onclick="showInfo()">More Info</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row button-row">
+      <button type="button" name="button" class="btn btn-primary btn-lg" onclick="prevPage()">Return</button>
+    </div>
+
+
+    <!--Scripts used-->
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cd74f3a459.js" crossorigin="anonymous"></script>
+  </body>
+</html>

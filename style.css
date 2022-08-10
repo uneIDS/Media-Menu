@@ -1,0 +1,161 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+/* CSS for Main Page */
+#searchContainter {
+  margin: 30vh auto 40vh auto;
+  display: block;
+
+  border-radius: 10px;
+}
+#searchContainter h1 {
+  font-size: 5rem;
+  margin-bottom: 7%;
+}
+#searchContainter label, #searchContainter .drop-down {
+  font-size: 1.8rem;
+  padding: 0 10px 0 10px;
+}
+.drop-down {
+  padding: 2%;
+  vertical-align: middle;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+.input-area {
+  align-items: center;
+}
+.input-area input {
+  transform: scale(2.7);
+  margin-right: 8px;
+}
+.search-bar {
+  margin: auto;
+  justify-content: space-between;
+}
+.fa-search:hover {
+  color: #f7b41e;
+  transform: scale(1.5);
+}
+
+/* CSS for Results Page */
+.results-container {
+  margin: 15vh auto 0vh auto;
+  max-width: 80%;
+}
+.result-row {
+  margin-bottom: 10%;
+  justify-content: space-around;
+}
+.result-card {
+  text-decoration: none;
+  float: left;
+}
+.card {
+  box-shadow: 2px 2px 5px rgba(0,0,0, 0.2);
+  color: black;
+  vertical-align: bottom;
+  border: 1.5px solid #71b8e4;
+  border-radius: 8px;
+}
+.result-card:hover {
+  transform: scale(1.05);
+  color: black;
+}
+.card-body {
+  padding: 5%;
+  font-size: 1.4rem;
+}
+.card-title, .card-text {
+  text-decoration: none;
+}
+.card-img-top {
+  margin: auto;
+  padding: 10%;
+}
+.narrow-image {
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+.button-row {
+  margin: 5% auto;
+  max-width: 100px;
+}
+.btn-lg {
+  transform: scale(1.3);
+  background-color: #71b8e4;
+  border: none;
+  color: black;
+}
+.btn-lg:hover {
+  background-color: #f7b41e;
+  color: black;
+  border: none;
+  transform: scale(1.5);
+}
+.button-container {
+  position: relative;
+  bottom: 0;
+}
+
+/* CSS for Info Page */
+.resource-name {
+  display: flex;
+  justify-content: center;
+}
+.inner-content {
+  /*border-style: solid;
+  border-width: 2px;
+  border-color: #7db7d2;*/
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 80%;
+  margin: auto;
+  font-size: 1.3rem;
+}
+.inner-content h3 {
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+.description h5 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.example-image img{
+  width: 75%;
+  max-width: 75%;
+  height: auto;
+}
+.example-video {
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  position: relative;
+}
+.example-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-container {
+  max-width: 75%;
+  width: 75%;
+  height: auto;
+  margin: auto;
+}
+.btn-info {
+  background-color: #71b8e4;
+  font-size: 1.3rem;
+}
+.btn-info:hover {
+  background-color: #f7b41e;
+  border: none;
+}
