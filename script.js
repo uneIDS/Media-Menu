@@ -5,7 +5,7 @@ var tools = [
     spice: "Easy"
   },
   {
-    name: "Hemmingway",
+    name: "Hemingway",
     type: "Writing/Editing",
     spice: "Easy"
   },
