@@ -162,7 +162,7 @@ a {
   border: none;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1238px) {
   #searchContainter label, #searchContainter .drop-down {
     font-size: 1.5rem;
     padding: 0 10px 0 10px;
