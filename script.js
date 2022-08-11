@@ -1,11 +1,11 @@
 var tools = [
   {
-    /*name: "Hypothes.is",
+    name: "Hypothes.is",
     type: "Writing/Editing",
     spice: "Easy"
-  },*/
+  },
   {
-    name: "Hemingway",
+    name: "Hemmingway",
     type: "Writing/Editing",
     spice: "Easy"
   },
@@ -99,15 +99,13 @@ for (let i = 0; i < tools.length; i++) {
       difficultySel === "All"
     ) {
      document.getElementById(tools[i].name).style.display = "block";
+
     } else if (
       mediaTypeSel === "All" &&
       difficultySel === tools[i].spice
     ) {
       document.getElementById(tools[i].name).style.display = "block";
-    } else if (
-      mediaTypeSel === "All" &&
-      difficultySel === "All"
-    ) {
+    } else if (mediaTypeSel === "All" && difficultySel === "All") {
       document.getElementById(tools[i].name).style.display = "block";
     }
   }
