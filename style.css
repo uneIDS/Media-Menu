@@ -1,9 +1,6 @@
 * {
   font-family: 'Lato', sans-serif;
 }
-a {
-  text-decoration: none;
-}
 /* CSS for Main Page */
 #searchContainter {
   margin: 30vh auto 40vh auto;
@@ -53,8 +50,8 @@ a {
 .result-card {
   text-decoration: none;
   float: left;
-  min-width: 18rem;
-  max-width: 25rem;
+  min-width: 20rem;
+  max-width: 30rem;
 }
 .card {
   box-shadow: 2px 2px 5px rgba(0,0,0, 0.2);
@@ -73,6 +70,11 @@ a {
 }
 .card-title, .card-text {
   text-decoration: none;
+}
+.card-title {
+  font-size: 1.7rem;
+  text-align: center;
+  padding-bottom: 5px;
 }
 .card-img-top {
   margin: auto;
