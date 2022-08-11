@@ -1,9 +1,9 @@
 var tools = [
   {
-    name: "Hypothes.is",
+    /*name: "Hypothes.is",
     type: "Writing/Editing",
     spice: "Easy"
-  },
+  },*/
   {
     name: "Hemingway",
     type: "Writing/Editing",
@@ -77,9 +77,6 @@ var tools = [
 }*/
 ];
 
-const diffLabels = document.querySelectorAll(
-  "#diffHeader-easy, #diffHeader-medium, #diffHeader-hard"
-);
 function loadPage() {
   var mediaTypeSel = document.getElementById("mediaType").value;
   var difficultySel = document.getElementById("diffLevel").value;
@@ -91,8 +88,6 @@ function loadPage() {
 function findTools() {
 var mediaTypeSel = sessionStorage.getItem("mediaTypeSel"), difficultySel = sessionStorage.getItem("difficultySel");
 
-console.log(mediaTypeSel);
-console.log(difficultySel);
 for (let i = 0; i < tools.length; i++) {
     if (
       tools[i].type.includes(mediaTypeSel) &&
@@ -104,13 +99,15 @@ for (let i = 0; i < tools.length; i++) {
       difficultySel === "All"
     ) {
      document.getElementById(tools[i].name).style.display = "block";
-
     } else if (
       mediaTypeSel === "All" &&
       difficultySel === tools[i].spice
     ) {
       document.getElementById(tools[i].name).style.display = "block";
-    } else if (mediaTypeSel === "All" && difficultySel === "All") {
+    } else if (
+      mediaTypeSel === "All" &&
+      difficultySel === "All"
+    ) {
       document.getElementById(tools[i].name).style.display = "block";
     }
   }
