@@ -53,6 +53,8 @@ a {
 .result-card {
   text-decoration: none;
   float: left;
+  min-width: 18rem;
+  max-width: 25rem;
 }
 .card {
   box-shadow: 2px 2px 5px rgba(0,0,0, 0.2);
@@ -158,4 +160,15 @@ a {
 .btn-info:hover {
   background-color: #f7b41e;
   border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #searchContainter label, #searchContainter .drop-down {
+    font-size: 1.5rem;
+    padding: 0 10px 0 10px;
+  }
+  .card-body {
+    padding: 5%;
+    font-size: 1.2rem;
+  }
 }
